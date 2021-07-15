@@ -1,11 +1,11 @@
 {	
 	"prefix": "multi", 
-	"defaultSessionName": "bot", 
-	"zeksKey": "apikey",
+	"defaultSessionName": "QRnya", 
+	"zeksKey": "akusayanguli",
 	"autoRead": true,
 	"maxLimit": 30,
-	"ownerList": ["628xxxxxx@s.whatsapp.net", "6282xxxxxx@s.whatsapp.net"],
+	"ownerList": ["18482024461@s.whatsapp.net", "6282279601471@s.whatsapp.net"],
 	"apiUrl": "https://api.zeks.xyz",
-	"pack": "Sticker",
+	"pack": "hariyadin",
 	"author": "BOT"
 }
