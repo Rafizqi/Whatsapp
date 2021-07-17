@@ -2,10 +2,10 @@
 	"prefix": "multi", 
 	"defaultSessionName": "QRnya", 
 	"zeksKey": "akusayanguli",
-	"autoRead": true,
-	"maxLimit": 30,
+	"autoRead": false,
+	"maxLimit": 999,
 	"ownerList": ["18482024461@s.whatsapp.net", "6282279601471@s.whatsapp.net"],
 	"apiUrl": "https://api.zeks.xyz",
-	"pack": "hariyadin",
-	"author": "BOT"
+	"pack": "Bot sakura",
+	"author": "hariyadin"
 }

@@ -49,7 +49,7 @@ module.exports = handle = (client, Client) => {
                 data.reply('Ups maaf server sedang error atau mungkin apikey invalid')
             }
         })
-        Client.cmd.on('playvid', async (data) => {
+        Client.cmd.on('playmp4', async (data) => {
             try {
                 if(isLimit(data.sender)) return data.reply(mess.limit)
                 if(data.body == "") return data.reply(`Kirim perintah *${data.prefix}playvid [ query ]*\nContoh : ${data.prefix}playvid amv`)
@@ -89,20 +89,6 @@ module.exports = handle = (client, Client) => {
             if(getresult.data.status == false) return data.reply(getresult.data.message)
             for(let i = 0; i < getresult.data.result.length; i++) {
                 Client.sendFileFromUrl(data.from, getresult.data.result[i].url, `ig.${getresult.data.result[i].type}`, `「 INSTAGRAM 」\n\n*Username*: ${getresult.data.owner}\n*Caption*: ${getresult.data.caption}`, data.message);
-            }
-        })
-        Client.cmd.on('igstory', async (data) => {
-            try {
-                if(isLimit(data.sender)) return data.reply(mess.limit)
-                if(data.body == "") return data.reply(`Kirim perintah *${data.prefix}igstory [ username ]*\nContoh : ${data.prefix}igstory jessnolimit`)
-                data.reply(mess.wait)
-                stomr = await axios.get(`${configs.apiUrl}/api/igs?apikey=${configs.zeksKey}&username=${data.body}`)
-                if(stomr.data.status == false) return data.reply(stomr.data.message)
-                for(let i = 0; i < stomr.data.data.length; i++) {
-                    Client.sendFileFromUrl(data.from, stomr.data.data[i].url, `ig.${stomr.data.data[i].type}`, `「 INSTAGRAM 」\n\n*Username*: ${stomr.data.username}\n*Type*: ${stomr.data.data[i].type}`, data.message);
-                }
-            } catch {
-                data.reply('Username tidak ditemukan')
             }
         })
         Client.cmd.on('joox', async (data) => {
@@ -892,7 +878,6 @@ module.exports = handle = (client, Client) => {
                 case 'leavest':
                 case 'thundertext':
                 case 'tlight':
-                case 'naruto':
                 case 'crosslogo':
                 case 'cslogo':
                 case 'crismes':
